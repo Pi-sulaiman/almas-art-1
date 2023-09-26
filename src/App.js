@@ -25,7 +25,7 @@ export const App = ({ images }) => {
     return () => mqlRef.current.removeEventListener('change', handleChange);
   }, []);
 
-  console.log(portrait, "dlkjfglsj");
+  // console.log(portrait, "dlkjfglsj");
   const [isFullScreen, setIsFullScreen] = useState(false);
 
   const enterFullScreen = async () => {
@@ -133,7 +133,7 @@ function Frames({ images, q = new THREE.Quaternion(), p = new THREE.Vector3() })
     <group
       ref={ref}
       // data= {props.text}
-      onClick={(e) => (e.stopPropagation(), setLocation(clicked.current === e.object ? '/' : '/item/' + e.object.text),console.log(e))}
+      onClick={(e) => (e.stopPropagation(), setLocation(clicked.current === e.object ? '/' : '/item/' + e.object.text))}
       onPointerMissed={() => setLocation('/')}>
       {images.map((props) => <Frame key={props.url} {...props} /> /* prettier-ignore */)}
     </group>
@@ -150,7 +150,7 @@ function Frame({ url, c = new THREE.Color(), ...props }) {
   const [rnd] = useState(() => Math.random())
   const name = getUuid(url)
   const isActive = params?.id === props.text
-  console.log("params?.id === props.text",params?.id === props.text,params?.id ,props.text)
+  // console.log("params?.id === props.text",params?.id === props.text,params?.id ,props.text)
   useCursor(hovered)
   useFrame((state, dt) => { 
     image.current.material.zoom = 2 + Math.sin(rnd * 10000 + state.clock.elapsedTime / 3) / 2
