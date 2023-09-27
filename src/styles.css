@@ -16,14 +16,17 @@ body {
   color: white;
   user-select: none;
 }
-.rotate{
+.rotate-portrait{
   height: 100vh;
   background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.rotate img{
+.rotate-landscape{
+  display: none;
+}
+.rotate-portrait img{
   width: 35vw;
 }
 .logo{

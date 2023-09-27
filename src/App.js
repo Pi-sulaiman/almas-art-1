@@ -64,13 +64,23 @@ export const App = ({ images }) => {
   };
 
 
-  return portrait ? (
-    <div className='rotate'>
-      <img src='/12.gif' alt="my-gif" />
-
-    </div>
-  ) : (
+  // return portrait ? (
+  //   <div className='rotate'>
+  //     <img src='/12.gif' alt="my-gif" />
+  //   </div>
+  // ) : 
+  return(
+    console.log(portrait, "dlkjfglsj"),
     <>
+    {portrait ? (
+      <div className='rotate-portrait'>
+        <img src='/12.gif' alt="my-gif" />
+      </div>
+    ) : (
+      <div className='rotate-landscape'>
+      </div>
+    )}
+    
     <a className='web-link'  href='https://almas-f.vercel.app/'>
     <img src={logo} />
     </a>
